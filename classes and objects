@@ -1,0 +1,27 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+class car{ // class creation 
+     public:
+			
+	string brand;
+		int speed;
+	
+	void show(){ // function creation
+		cout<<brand<<" "<<speed<<endl;
+		
+	}
+};
+
+int main(){ // main function
+	car c1; // obiect creation 
+	 c1.brand="MERCEDES";
+	 c1.speed=180;
+	 c1.show(); // calling function
+	 
+	 getch();
+	 return 0;
+	
+}
