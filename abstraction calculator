@@ -1,0 +1,28 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class calculator{
+	public:
+		void add(int a, int b){
+			cout<<"sum= " <<a+b <<endl;
+			}
+			void subtract(int x, int y){
+				cout<<"difference= "<< x-y <<endl;
+     			}
+
+               void multiply(int c, int d){
+					cout<<"product= "<< c*d <<endl;
+					
+               }
+
+};
+   int main(){
+		calculator c;
+		c.add(4,8);
+		c.subtract(278,87);
+		c.multiply(57,9);
+		 
+		 getch();
+		 return 0;
+   }
