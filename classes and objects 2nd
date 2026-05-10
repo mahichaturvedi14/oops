@@ -1,0 +1,25 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class book{ // class
+	public:
+		string title;
+		int price;
+		
+    void display(){ //function
+		cout<<title<<endl<<price;
+		
+    }
+};
+
+int main(){
+	book B; //object
+	B.title="Harry potter";
+	B.price=159;
+	B.display();
+	
+	getch();
+	return 0;
+	
+}
