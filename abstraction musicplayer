@@ -1,0 +1,29 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class MusicPlayer{
+	public:
+		void play(){
+			cout<<"music played"<<endl;
+			
+		}
+		void pause(){
+			cout<<"music paused"<<endl;
+			
+		}
+		void stop(){
+			cout<<"music stopped"<<endl;
+			
+		}
+}; 
+
+    int main(){
+		MusicPlayer m;
+		m.play();
+		m.pause();
+		m.stop();
+		
+		getch();
+		return 0;		
+    }
