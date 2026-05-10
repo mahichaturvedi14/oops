@@ -1,0 +1,34 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class bank{
+	private:
+		int balance;
+		
+	
+		public:
+			void deposit(int amt){
+				balance= balance+amt;
+				
+				cout<<" money deposited"<< endl;
+				
+			}
+			void withdraw(int amt){
+				balance= balance-amt;
+				cout<<"money withdrawn"<<endl;
+			}
+			void showbalance(){
+				cout<<"balance is "<< balance <<endl;
+			}
+};
+       
+       int main(){
+			bank b;
+			b.showbalance();
+			b.deposit(589);
+			b.withdraw(4628);
+			
+			getch();
+			return 0;
+       }
