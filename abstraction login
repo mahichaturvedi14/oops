@@ -1,0 +1,29 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class login{
+	private:
+		string password;
+		
+		public:
+			void setpassword(string p){
+				password=p;
+			}
+			void loginpass(string pass){
+				if(password==pass){
+					cout<<"login successful"<<endl;}
+					else{
+					cout<<"wrong password"<<endl;}
+			}
+	};
+	
+	int main(){
+		login x;
+		x.setpassword("mahi1234");
+		x.loginpass("mahi234");
+		
+		getch();
+		return 0;
+		
+	}
