@@ -1,0 +1,41 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class result{
+	private:
+		int marks;
+		char grade;
+		
+		public:
+			void setmarks(int m){
+				marks=m;
+				}
+				void calculategrades(){
+					if(marks>=90){
+					grade='A';}
+					else if(marks>=75){
+							grade='B';}
+						else if(marks>=65){
+					     		grade='C';}
+						   else if(marks>=45){
+				              	grade='D';}
+							 else{
+								grade='F';}
+							}
+			    void showresult(){
+					cout<<"marks= "<<marks<<endl;
+					cout<<"grades= "<<grade<<endl;
+			    }	
+									        
+			
+};
+int main(){
+	result x;
+	x.setmarks(25);
+	x.calculategrades();
+	x.showresult();
+	
+	getch();
+	return 0;
+}
