@@ -1,0 +1,26 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class ElectricityBill{
+	private:
+		int units;
+	
+	public:
+		void setunits(int u){
+			units=u;
+		}
+		void calculateBill(){
+			int bill;
+			bill=units*8;
+			cout<<"bill= "<<bill<<endl;
+		}
+};
+int main(){
+	ElectricityBill b;
+	b.setunits(75);
+	b.calculateBill();
+	
+	getch();
+	return 0;
+}
