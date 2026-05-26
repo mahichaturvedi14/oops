@@ -1,0 +1,28 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class Rectangle{
+	private:
+		int length;
+		int breadth;
+		
+		public:
+			void setData(int l, int b){
+				length=l;
+				breadth=b;
+			}
+			void area(){
+				int area;
+				area=length*breadth;
+				cout<<"area =" <<area<<endl;
+			}
+};
+int main(){
+	Rectangle a;
+	a.setData(5,8);
+	a.area();
+	
+	getch();
+	return 0;
+}
