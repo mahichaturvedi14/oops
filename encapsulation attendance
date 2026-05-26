@@ -1,0 +1,25 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class Attendance{
+	private:
+		int attendance;
+		public:
+			void setAttendance(float x){
+				attendance=x;
+			}
+			void checkEligibility(){
+				if (attendance>=75){
+				cout<< "student is eligible"<<endl;}
+				else{
+				cout<<"student is not eligible"<<endl;}}
+};
+     int main(){
+     Attendance a;
+     a.setAttendance(82);
+     a.checkEligibility();
+     
+     getch();
+     return 0;
+	}
