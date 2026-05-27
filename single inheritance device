@@ -1,0 +1,33 @@
+/*Create:
+
+Base class ElectronicDevice
+function powerOn()
+Derived class Laptop
+function coding()*/
+
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class ElectronicDevice{
+	public:
+		void powerOn(){
+			cout<<"power off"<<endl;
+			
+		}
+		
+};
+class Laptop:public ElectronicDevice{
+	public:
+		void coding(){
+			cout<<"its function is to code"<<endl;
+		}
+};
+int main(){
+	Laptop f;
+	f.powerOn();
+	f.coding();
+	
+	getch();
+	return 0;
+}
