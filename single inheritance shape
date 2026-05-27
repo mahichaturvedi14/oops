@@ -1,0 +1,38 @@
+/*Create:
+Base class Shape
+variables length, breadth
+Derived class Rectangle
+function area()
+Calculate rectangle area.*/
+
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class Shape{
+	public:
+	int length;
+	int breadth;
+	
+	   void getData(int l,int b){
+			length=l;
+			breadth=b;
+			
+			}
+};
+class rectangle:public Shape{
+	public:
+	void area(){
+		cout<<"area is"<< length*breadth<<endl;
+	}
+	
+};
+
+int main(){
+	rectangle a;
+	a.getData(7,8);
+	a.area();
+	
+	getch();
+	return 0;
+}
