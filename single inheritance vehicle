@@ -1,0 +1,39 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class vehicle{
+	public:
+		int speed;
+		void getSpeed(){
+		cout<<"enter speed"<<endl;
+		cin>>speed;	
+		}
+		void showSpeed(){
+			cout<<"speed is"<<speed<<"km/hr"<<endl;
+		}
+};
+class car:public vehicle{
+	public:
+		string brand;
+	void getBrand(){
+		cout<<"enter brand"<<endl;
+		cin>>brand;
+	}
+	void showBrand(){
+		cout<<"brand is"<<brand<<endl;
+	}
+};
+
+int main(){
+	car c;
+	c.getSpeed();
+	c.getBrand();
+	
+	
+	c.showSpeed();
+	c.showBrand();
+	
+	getch();
+	return 0;
+	}
