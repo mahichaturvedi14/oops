@@ -1,0 +1,42 @@
+/*Base class Bank
+variable bankName
+Derived class Customer
+variable accountNumber
+function to display details*/
+
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class Bank{
+	public:
+		string bankName;
+		
+		void getData(){
+			cout<<"enter bank name"<<endl;
+			cin>>bankName;
+		} 
+};
+class customer:public Bank{
+	public:
+		int accountNumber;
+		
+		void getInput(){
+			cout<<"enter account number"<<endl;
+			cin>>accountNumber;
+			}
+		
+		void display(){
+			cout<<"bank name is "<< bankName<<endl<<"account number is "<<accountNumber<<endl;
+		}
+};
+
+int main(){
+	customer d;
+	d.getData();
+	d.getInput();
+	d.display();
+	
+	getch();
+	return 0;
+}
