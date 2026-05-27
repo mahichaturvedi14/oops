@@ -1,0 +1,56 @@
+/*Create:
+
+Base class Product
+product name and price
+Derived class Electronics
+warranty period
+Derived class Mobile
+brand and model*/
+
+#include <iostream>
+using namespace std;
+
+class Product{
+	public:
+	string name;
+	int price;
+	
+	void details(){
+	cout<<"enter product name"<<endl;
+	cin>>name;
+	cout<<"enter product price"<<endl;
+	cin>>price;
+    }
+     
+};
+
+class Electronics:public Product{
+	public:
+		
+		void warranty(){
+		cout<<"warranty period is 2 years"<<endl;
+	}
+};
+
+class Mobile: public Electronics{
+	public:
+		string brand;
+		string model;
+		
+		void input(){
+		
+		cout<<"enter brand name"<<endl;
+		cin>>brand;
+		cout<<"enter model"<<endl;
+		cin>>model;
+	}
+};
+
+int main(){
+	Mobile x;
+	x.details();
+	x.warranty();
+	x.input();
+	
+	return 0;
+	}
