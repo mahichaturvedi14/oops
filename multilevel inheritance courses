@@ -1,0 +1,79 @@
+/*User ? username, email
+Learner inherits User ? enrolled courses
+CertifiedLearner inherits Learner ? certificate ID, completion percentage
+Generate certificate eligibility report.*/
+
+#include <iostream>
+using namespace std;
+
+class User{
+	protected:
+		string username;
+		string email;
+		
+		public:
+		void getdetails(){
+		
+		cout<<"enter username"<<endl;
+		cin>>username;
+		
+		cout<<"enter email address"<<endl;
+		cin>>email;
+	}
+};
+
+class Learner: public User{
+	protected:
+	    int course;
+	    
+	    public:
+	    void getlearnerData(){
+	    
+	    cout<<"enter the number of enrolled courses"<<endl;
+	    cin>>course;
+	}
+};
+
+class CertifiedLearner: public Learner{
+	private:
+		string certificateID;
+		float completionPercentage;
+		
+		public:
+			void getCertificate(){
+				cout<<"submit certificate id"<<endl;
+				cin>>certificateID;
+				
+				cout<<"enter the percentage of completion"<<endl;
+				cin>>completionPercentage;
+					
+			}
+			
+		  void 	getReport(){
+	           
+			   cout<<"the user's username is: "<<username<<endl;
+			   cout<<"email : "<< email<< endl;
+			   cout<<"number of enrolled courses are: " <<course<<endl;
+			   cout<<"certificate id is: " <<certificateID<<endl;
+			   cout<<"percentage of completion is: " <<completionPercentage<<endl;
+			   
+			   
+			   if(completionPercentage>=80){
+					cout<<"eligible for certificate"<<endl;
+			   }
+			   else{
+					cout<<"not eligible for certificate"<<endl;
+			   }
+		  }
+		
+};
+
+int main(){
+	CertifiedLearner x;
+	x.getdetails();
+	x.getlearnerData();
+	x.getCertificate();
+	x.getReport();
+	
+	return 0;
+} 
