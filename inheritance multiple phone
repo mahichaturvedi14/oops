@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class phone{
+	public:
+		
+		void makecall(){
+			cout<<"calling...."<<endl;
+			
+		}
+	};
+	class camera{
+		public:
+			void takePhoto(){
+				cout<<"photo taken"<<endl;
+				
+			}
+	};
+	
+	class smartPhone:public phone, public camera{
+		
+	};
+	
+	int main(){
+		
+		smartPhone p;
+		p.makecall();
+		p.takePhoto();
+		
+		return 0;
+	}
