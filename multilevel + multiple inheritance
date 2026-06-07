@@ -1,0 +1,111 @@
+/*Create:
+Student ? roll number, name
+Marks ? marks in 5 subjects
+Sports ? sports score
+Create Result inheriting from both Marks and Sports, where Marks inherits from Student
+
+Calculate:
+Total marks
+Percentage
+Grade*/
+
+#include <iostream>
+using namespace std;
+
+class student{
+	protected:
+		string rollNO;
+		string name;
+		
+		public:
+		void getDetails(){
+			cout<<"enter roll number of the student"<<endl;
+			cin>>rollNO;
+			
+			cout<<"enter name of the student"<<endl;
+			cin>>name;
+		}
+};
+
+class marks: public student{
+	protected:
+		float maths;
+		float science;
+		float english;
+		float hindi;
+		float sst;
+		
+		
+		public:
+		   void	getmarks(){
+				cout<<"enter marks of maths"<<endl;
+				cin>>maths;
+				cout<<"enter marks of science"<<endl;
+				cin>>science;
+				cout<<"enter marks of english"<<endl;
+				cin>>english;
+				cout<<"enter marks of hindi"<<endl;
+				cin>>hindi;
+				cout<<"enter marks of sst"<<endl;
+				cin>>sst;
+			}
+};
+
+class sports{
+	protected:
+		int sportscore;
+		
+		public:
+			void getscores(){
+				cout<<"enter sports score"<<endl;
+				cin>>sportscore;
+			}
+};
+
+class result: public marks, public sports{
+	protected:
+		float totalmarks;
+		float percentage;
+		char grade;
+		
+		public:
+			void displayResult(){
+				totalmarks = maths+science+sst+hindi+english;
+				percentage = totalmarks/5.0;
+			
+				
+			
+			
+		
+				if(percentage>=90){
+					grade='A';}
+					else if(percentage<90 && percentage>=75){
+						grade='B';}
+						else if(percentage<75 && percentage>=55){
+							grade='C';}
+							else if(percentage<55 && percentage>=40){
+								grade='D';}
+								else{
+									grade='F';}
+									
+									
+			cout<<"....RESULT...."<<endl;
+			cout<<"name: "<<name <<endl;
+		    cout<<"roll number: "<<rollNO<< endl;
+		    cout<<"total marks: "<<totalmarks<<endl;
+            cout<<"percentage: "<<percentage<<endl;
+	     	cout<<"grade: "<<grade<<endl;
+		   	cout<<"sports score: "<<sportscore<<endl;
+			}
+							
+};
+
+int main(){
+	result r;
+	r.getDetails();
+	r.getmarks();
+	r.getscores();
+	r.displayResult();
+	
+	return 0;
+}
