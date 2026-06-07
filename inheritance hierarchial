@@ -1,0 +1,129 @@
+/*Create a base class Person with:
+Name
+Age
+Gender
+
+Derived classes:
+Doctor ? specialization, salary
+Patient ? disease, room number
+Nurse ? shift, experience
+Display complete details for each.
+Hierarchy:
+
+           Person
+         /    |    \
+        /     |     \
+    Doctor  Patient  Nurse */
+    
+#include <iostream>
+using namespace std;
+
+class person{
+	protected:
+		string name;
+		int age;
+		string gender;
+		
+		public:
+		void details(){
+		cout<<"enter name"<<endl;
+		cin>>name;
+		cout<<"enter age"<<endl;
+		cin>>age;
+		cout<<"enter gender"<<endl;
+		cin>>gender;
+	}
+};
+
+class doctor: public person{
+	protected:
+		string specialization;
+	    float salary;
+	    
+	    public:
+			void data(){
+				cout<<"enter specialization"<<endl;
+				cin>>specialization;
+				cout<<"enter salary"<<endl;
+				cin>>salary;
+			}
+				
+				
+				 void displayDoctor() {
+        cout << "\n--- Doctor Details ---" << endl;
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Gender: " << gender << endl;
+        cout << "Specialization: " << specialization << endl;
+        cout << "Salary: " << salary << endl;
+			}
+};
+
+class patient: public person{
+	protected:
+		string disease;
+		string roomNumber;
+		
+		public:
+			void getPatientDetails(){
+				cout<<"enter patient's disease"<<endl;
+				cin>>disease;
+				cout<<"enter patients roomNumber"<<endl;
+				cin>>roomNumber;
+			}
+				
+				 void displayPatient() {
+        cout << "\n--- Patient Details ---" << endl;
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Gender: " << gender << endl;
+        cout << "disease: " << disease << endl;
+        cout << "room number: " <<roomNumber<< endl;
+			}
+};
+
+class nurse: public person{
+	protected:
+		int shift;
+		string experience;
+		
+		
+		public:
+			void nurseDetails(){
+				cout<<"enter shift"<<endl;
+				cin>>shift;
+				cout<<"enter experience"<<endl;
+				cin>>experience;
+			}
+				
+				
+				 void displayNurse() {
+        cout << "\n--- Nurse Details ---" << endl;
+        cout << "Name: " << name << endl;
+        cout << "Age: " << age << endl;
+        cout << "Gender: " << gender << endl;
+        cout << "shift: " << shift << endl;
+        cout << "experience: " << experience << endl;
+			}
+};
+
+int main(){
+	doctor d;
+	d.details();
+	d.data();
+	d.displayDoctor();
+	
+	
+	patient p;
+	p.details();
+	p.getPatientDetails();
+	p.displayPatient();
+	
+	nurse n;
+	n.details();
+	n.nurseDetails();
+	n.displayNurse();
+	
+	
+	return 0;
+}
