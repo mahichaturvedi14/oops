@@ -1,0 +1,39 @@
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class data{
+	public:
+		
+		void print(char c, int n){
+			for (int i=1; i<=n; i++){
+				cout<<c;
+			}
+			cout<<endl;
+			
+		}
+		
+		void print(int num){
+			cout<<num<<endl;
+		}
+		
+		void print(string name){
+			cout<<name<<endl;
+		}
+		
+		void print(float value){
+			cout<<value<<endl;
+		}
+};
+
+int main(){
+	
+	data d;
+	d.print('*',5);
+	d.print(6326);
+	d.print("mahi");
+	d.print(5.9f);
+	
+	getch();
+	return 0;
+}
