@@ -1,0 +1,38 @@
+/*Create overloaded functions volume():
+
+Cube ? one parameter
+Cuboid ? three parameters
+Cylinder ? radius and height*/
+
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class shapes{
+	public:
+		
+		
+		float volume(float x){
+			return x*x*x;
+		}
+		
+		float volume(float a, float b, float c){
+			return a*b*c;
+		}
+		
+		float volume(float r, float h){
+			return 3.14*r*r*h;
+		}
+};
+
+int main(){
+	shapes s;
+	cout<<"volume of cube is:"<<s.volume(5.0)<<endl;
+	cout<<"volume of cuboid is:"<<s.volume(4.0, 2.0, 8.0)<<endl;
+	cout<<"volume of cylinder is:"<<s.volume(3.2, 5.9)<<endl;
+	
+	getch();
+	return 0;
+	
+}
+       
