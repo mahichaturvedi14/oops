@@ -1,0 +1,32 @@
+/*Create a class Rectangle with:
+
+length
+breadth
+
+Use a parameterized constructor to initialize values and calculate area.*/
+
+#include <iostream>
+using namespace std;
+
+class rectangle{
+	
+	int length;
+	int breadth;
+	
+	public:
+		rectangle(float l,float b){
+		
+		length=l;
+		breadth=b;
+	}
+		void area(){
+			cout<<"area of rectangle is: "<<length*breadth<<endl;		}
+};
+
+int main(){
+	
+	rectangle s(4.0,5.0);
+	s.area();
+	
+	return 0;
+}
