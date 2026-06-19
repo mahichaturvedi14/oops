@@ -1,0 +1,49 @@
+/*Problem:
+Create a class Student with data members:
+
+name
+roll number
+marks
+
+Create a default constructor that initializes:
+
+name = "Unknown"
+roll = 0
+marks = 0
+
+Display student details*/
+
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+class Student{
+
+		string name;
+		int rollno;
+		int marks;
+		
+		public:
+			
+			Student()
+			{
+				name="unknown";
+				rollno=0;
+				marks=0;
+				}
+				
+				void display(){
+					
+					cout<<"name is: "<<name<<endl;
+					cout<<"roll number is: "<<rollno<<endl;	
+					cout<<"marks: "<<marks<<endl;			}
+};
+
+
+int main(){
+	Student s;
+	s.display();
+	
+	getch();
+	return 0;
+}
